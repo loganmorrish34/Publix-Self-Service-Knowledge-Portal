@@ -1,1 +1,0 @@
-import{j as e,L as t}from"./main-DTbmUAL-.js";const o=()=>e.jsxs("div",{className:"text-center py-24 text-gray-500",children:[e.jsx("p",{className:"text-xl font-semibold mb-2",children:"Article not found"}),e.jsx(t,{to:"/knowledge-base",className:"text-[#00843D] underline",children:"Back to Knowledge Base"})]});export{o as notFoundComponent};
