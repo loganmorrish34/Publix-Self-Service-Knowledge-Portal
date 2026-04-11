@@ -257,7 +257,17 @@ function App() {
                 Search helpful knowledge articles, review step by step fixes, sign in as an employee, and create an incident or request when you still need help.
               </p>
               <div className="hero-actions">
-                <button className="primary-btn" onClick={() => setActiveTab("knowledge")}>Browse Articles</button>
+                <button
+  className="primary-btn"
+  onClick={() => {
+    setActiveTab("knowledge");
+    setTimeout(() => {
+      document.getElementById("knowledge")?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  }}
+>
+  Browse Articles
+</button>
                 <button className="secondary-btn" onClick={() => setActiveTab("report")}>Create Report</button>
               </div>
               <div className="stats-grid">
@@ -306,7 +316,7 @@ function App() {
 
         {(activeTab === "home" || activeTab === "knowledge") && (
           <section className="content-grid">
-            <div className="card section-card">
+            <div id="knowledge" className="card section-card">
               <div className="section-head">
                 <div>
                   <h3>Knowledge Articles</h3>
